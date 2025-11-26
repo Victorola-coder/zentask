@@ -44,7 +44,7 @@ export default function TimerSettings({ isOpen, onClose }: TimerSettingsProps) {
               <Input
                 type="number"
                 value={localSettings.focusDuration}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setLocalSettings({
                     ...localSettings,
                     focusDuration: Number(e.target.value),
@@ -59,7 +59,7 @@ export default function TimerSettings({ isOpen, onClose }: TimerSettingsProps) {
               <Input
                 type="number"
                 value={localSettings.shortBreak}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setLocalSettings({
                     ...localSettings,
                     shortBreak: Number(e.target.value),
@@ -74,7 +74,7 @@ export default function TimerSettings({ isOpen, onClose }: TimerSettingsProps) {
               <Input
                 type="number"
                 value={localSettings.longBreak}
-                onChange={(e) =>
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setLocalSettings({
                     ...localSettings,
                     longBreak: Number(e.target.value),
