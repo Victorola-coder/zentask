@@ -85,3 +85,26 @@ type TextareaProps = {
 type OTPState = {
   [key: string]: string;
 };
+
+type TaskStatus = "todo" | "in-progress" | "done";
+type TaskPriority = "low" | "medium" | "high";
+
+interface Task {
+  id: string;
+  title: string;
+  description?: string;
+  status: TaskStatus;
+  priority: TaskPriority;
+  createdAt: number;
+  tags?: string[];
+}
+
+interface TimerSettings {
+  focusDuration: number;
+  shortBreak: number;
+  longBreak: number;
+  autoStartBreaks: boolean;
+  autoStartPomodoros: boolean;
+  soundEnabled: boolean;
+  ambientSound?: "rain" | "whitenoise" | "lofi" | null;
+}
